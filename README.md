@@ -42,3 +42,22 @@ Se houver loops aninhados, então o termo muda para **O(a * b)** ou O(n * n).
 Arrays possuem cenários que Big O pode determinar se é bom ou não usar esse tipo de estrutura de dados. Por exemplo, métodos como Splice e Unshift são considerados O(n), pois precisam realocar o index de elementos adicionados/removidos do inicio da Array. Por outro lado, Push é constante, pois não precisar realocar o index.
 
 Se olharmos para questão de mémoria, métodos como Map, Filter ou Slice podem retornar uma nova Array. Ou seja, se quisermos apenas fazer um loop normal, usamos ForEach, sem precisar criar espaço desnecessário.
+
+## Linked List
+
+É um tipo de Estrutura de Dado usado para armazenar **dados lineares**.
+
+**Características**:
+
+* Não possui **index**, mas **nodes**;
+* Pode estar em **qualquer lugar da memória**;
+* Possui **Head** (variável que aponto para o primeiro item da lista) e **Tail** (variável que aponta para o último elemento da lista);
+* Se não houver mais elementos, retornará **Null**;
+* Possui o conceito de **Next** (estar ligado a outro elemento próximo);
+* Possui **length** para dizer o número total de nodes.
+
+### Linked List - Big O vs Array:
+
+![image](https://user-images.githubusercontent.com/91689754/160217064-a98bee41-8b1d-43bc-b43e-d2064e542a51.png)
+
+A grande vantagem em relação a Arrays é a forma como Linked Lists podem remover(shift) e adicionar(unshift) elementos no inicio da lista.
