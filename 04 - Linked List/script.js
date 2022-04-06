@@ -104,12 +104,12 @@ class LinkedList {
   }
   /**
    * Sobrescreve o valor do Node.
-   * 
+   *
    * Retorna true se o index for encontrado. Caso contrário, retornará false.
-   * 
+   *
    * @param  {Number} index identifica o elemento de acordo com index.
    * @param  {Number} value Sobrescreve o valor do Node.
-   * 
+   *
    */
   set(index, value) {
     let temp = this.get(index);
@@ -118,5 +118,26 @@ class LinkedList {
       return true;
     }
     return false;
+  }
+  /**
+   * Permite inserir um novo valor em qualquer lugar da Lista.
+   * 
+   * Retornará false se o index for menor que zero ou maior que a largura da Lista.
+   * 
+   * @param  {Number} index identifica o elemento de acordo com index.
+   * @param  {Number} value Insere um novo elemento com base no valor.
+   */
+  insert(index, value) {
+    if (index === 0) return this.unshift(value);
+    if (index === this.length) return this.push(value);
+    if (index < 0 || index > this.length) return false;
+
+    const newNode = new Node(value);
+    const temp = this.get(index - 1);
+
+    newNode.next = temp.next;
+    temp.next = newNode;
+    this.length++;
+    return true;
   }
 }
