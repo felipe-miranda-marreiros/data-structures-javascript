@@ -90,4 +90,16 @@ class LinkedList {
     }
     return temp;
   }
+  /**
+   * @param  {Number} index Retorna um node com base no index. Se o index for menor que 0 ou maior que o tamanho da Lista, retornará undefined.
+   */
+  get(index) {
+    if (index < 0 || index >= this.length) return undefined;
+
+    let temp = this.head;
+    for (let i = 0; i < index; i++) {
+      temp = temp.next;
+    }
+    return temp;
+  }
 }
