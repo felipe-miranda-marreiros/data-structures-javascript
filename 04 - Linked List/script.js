@@ -102,4 +102,21 @@ class LinkedList {
     }
     return temp;
   }
+  /**
+   * Sobrescreve o valor do Node.
+   * 
+   * Retorna true se o index for encontrado. Caso contrário, retornará false.
+   * 
+   * @param  {Number} index identifica o elemento de acordo com index.
+   * @param  {Number} value Sobrescreve o valor do Node.
+   * 
+   */
+  set(index, value) {
+    let temp = this.get(index);
+    if (temp) {
+      temp.value = value;
+      return true;
+    }
+    return false;
+  }
 }
